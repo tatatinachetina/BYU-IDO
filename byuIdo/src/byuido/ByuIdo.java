@@ -6,6 +6,7 @@
 package byuido;
 
 import citbyui.cit260.model.Game;
+import citbyui.cit260.model.Player;
 
 /**
  *
@@ -17,7 +18,11 @@ public class ByuIdo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Player playerOne = new Player();
+        playerOne.setName("Tatatina");
+        playerOne.setGender("female");
+        playerOne.setBestTime(7.00);
         
         Game game = new Game();
         game.setCurrentScore(20.75);
