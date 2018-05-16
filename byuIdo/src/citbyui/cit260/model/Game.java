@@ -6,6 +6,8 @@
 package citbyui.cit260.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Objects;
 
 /**
  *
@@ -54,15 +56,12 @@ public class Game implements Serializable{
     }
 
     @Override
-    public String toString() {
-        return "Game{" + "totalDays=" + totalDays + ", currentScore=" + currentScore + '}';
-    }
-
-    @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 29 * hash + (int) (this.totalDays ^ (this.totalDays >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.currentScore) ^ (Double.doubleToLongBits(this.currentScore) >>> 32));
+        int hash = 3;
+        hash = 41 * hash + (int) (this.totalDays ^ (this.totalDays >>> 32));
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.currentScore) ^ (Double.doubleToLongBits(this.currentScore) >>> 32));
+        hash = 41 * hash + Arrays.deepHashCode(this.items);
+        hash = 41 * hash + Objects.hashCode(this.player);
         return hash;
     }
 
@@ -84,8 +83,21 @@ public class Game implements Serializable{
         if (Double.doubleToLongBits(this.currentScore) != Double.doubleToLongBits(other.currentScore)) {
             return false;
         }
+        if (!Arrays.deepEquals(this.items, other.items)) {
+            return false;
+        }
+        if (!Objects.equals(this.player, other.player)) {
+            return false;
+        }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Game{" + "totalDays=" + totalDays + ", currentScore=" + currentScore + ", items=" + items + ", player=" + player + '}';
+    }
+
+    
     
     
     
