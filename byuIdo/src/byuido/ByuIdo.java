@@ -1,6 +1,7 @@
 
 package byuido;
 
+import citbyui.cit260.model.Actor;
 import citbyui.cit260.model.Game;
 import citbyui.cit260.model.Player;
 
@@ -19,6 +20,14 @@ public class ByuIdo {
         playerOne.setName("Tatatina");
         playerOne.setGender("female");
         playerOne.setBestTime(7.00);
+        
+        /*String playerOneName = playerOne.getName();
+        String playerOneGender = playerOne.getGender();
+        double playerOneBestTime = playerOne.getBestTime();
+        */
+        System.out.println(playerOne.toString());
+               
+        System.out.println(Actor.John.toString());
         
         Game game = new Game();
         game.setCurrentScore(20.75);
