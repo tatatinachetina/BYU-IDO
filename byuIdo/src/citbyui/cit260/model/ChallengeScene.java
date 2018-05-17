@@ -9,7 +9,7 @@ package citbyui.cit260.model;
  *
  * @author Jake
  */
-public class ChallengeScene extends Location {
+public class ChallengeScene  {
     private long noCorrect;
     private long requiredCorrect;
     
