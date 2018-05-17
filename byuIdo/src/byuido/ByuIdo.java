@@ -3,6 +3,7 @@ package byuido;
 
 import citbyui.cit260.model.Actor;
 import citbyui.cit260.model.Game;
+import citbyui.cit260.model.Map;
 import citbyui.cit260.model.Player;
 
 /**
@@ -28,6 +29,15 @@ public class ByuIdo {
         System.out.println(playerOne.toString());
                
         System.out.println(Actor.John.toString());
+        
+        //test 
+        Map mapOne = new Map();
+        
+        mapOne.setDescription("Walmart");
+        mapOne.setRowCount(5);
+        mapOne.setColumnCount(5);
+        
+        System.out.println(mapOne.toString());
         
         Game game = new Game();
         game.setCurrentScore(20.75);

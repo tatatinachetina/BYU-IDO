@@ -19,6 +19,7 @@ public class Game implements Serializable{
     private double currentScore;
     private InventoryItem[] items;
     private Player player;
+    private Map map;
             
     public Game() {
     }
@@ -55,13 +56,22 @@ public class Game implements Serializable{
         this.player = player;
     }
 
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + (int) (this.totalDays ^ (this.totalDays >>> 32));
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.currentScore) ^ (Double.doubleToLongBits(this.currentScore) >>> 32));
-        hash = 41 * hash + Arrays.deepHashCode(this.items);
-        hash = 41 * hash + Objects.hashCode(this.player);
+        int hash = 5;
+        hash = 59 * hash + (int) (this.totalDays ^ (this.totalDays >>> 32));
+        hash = 59 * hash + (int) (Double.doubleToLongBits(this.currentScore) ^ (Double.doubleToLongBits(this.currentScore) >>> 32));
+        hash = 59 * hash + Arrays.deepHashCode(this.items);
+        hash = 59 * hash + Objects.hashCode(this.player);
+        hash = 59 * hash + Objects.hashCode(this.map);
         return hash;
     }
 
@@ -89,13 +99,18 @@ public class Game implements Serializable{
         if (!Objects.equals(this.player, other.player)) {
             return false;
         }
+        if (!Objects.equals(this.map, other.map)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Game{" + "totalDays=" + totalDays + ", currentScore=" + currentScore + ", items=" + items + ", player=" + player + '}';
+        return "Game{" + "totalDays=" + totalDays + ", currentScore=" + currentScore + ", items=" + items + ", player=" + player + ", map=" + map + '}';
     }
+
+   
 
     
     
