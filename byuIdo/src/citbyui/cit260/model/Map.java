@@ -8,24 +8,24 @@ package citbyui.cit260.model;
 //serializable interface
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author tanya
  */
 public class Map implements Serializable {
-    
+
     //class instance variables
     private String Description;
     private int rowCount;
     private int columnCount;
-    
+
     //Create the default constructor method
     //Do not select any of the attribute variable check boxes 
     //when generating the default constructor
     public Map() {
     }
-    
-    
+
     //create "getter" and "setter" methods for each of the attribute variable
     public String getDescription() {
         return Description;
@@ -50,7 +50,7 @@ public class Map implements Serializable {
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
-    
+
     // implement the toString(),equals(), and hashCode() methods
     @Override
     public int hashCode() {
@@ -84,13 +84,11 @@ public class Map implements Serializable {
         }
         return true;
     }
-    
-    //
 
+    //
     @Override
     public String toString() {
         return "Map{" + "Description=" + Description + ", rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
     }
-    
-    
+
 }
