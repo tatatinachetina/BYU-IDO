@@ -7,6 +7,7 @@ package citbyui.cit260.model;
 
 import java.awt.Point;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public enum Actor implements Serializable {
 
@@ -16,10 +17,12 @@ public enum Actor implements Serializable {
     Gabby("Gabby", "He likes sports", new Point(1,4), "NPC");
     
     
-    private String name;
-    private String description;
-    private Point coordinates;
-    private String type;
+    private final String name;
+    private final String description;
+    private final Point coordinates;
+    private final String type;
+    
+    private final ArrayList <Relationship> relationships = new ArrayList<>();
 
     Actor(String name, String description, Point coordinates, String type) {
         this.name = name;
