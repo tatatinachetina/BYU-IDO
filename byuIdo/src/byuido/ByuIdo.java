@@ -4,6 +4,7 @@ package byuido;
 import citbyui.cit260.model.Actor;
 import citbyui.cit260.model.ChallengeScene;
 import citbyui.cit260.model.Game;
+import citbyui.cit260.model.InventoryItem;
 import citbyui.cit260.model.Map;
 import citbyui.cit260.model.Player;
 import citbyui.cit260.model.Question;
@@ -20,11 +21,7 @@ public class ByuIdo {
      */
     public static void main(String[] args) {
         //Game
-        Game game = new Game();
-        game.setCurrentScore(20.75);
-        game.setTotalDays(10);
-        System.out.println(game.toString());
-   
+        
         //Player
         Player playerOne = new Player();
         playerOne.setName("Tatatina");
@@ -36,6 +33,11 @@ public class ByuIdo {
         System.out.println(Actor.John.toString());
         
         //Inventory Item
+        InventoryItem calculator = new InventoryItem();
+        calculator.setItemType("");
+        calculator.setDescription("A Calculator");
+        calculator.setName("Calculator");
+        calculator.setQuantityInStock(1);
         
         //Map  
         Map mapOne = new Map();
@@ -62,6 +64,12 @@ public class ByuIdo {
         question.setAmount(120);
         System.out.println(question.toString());
         
+        Game game = new Game();
+        game.setCurrentScore(20.75);
+        game.setTotalDays(10);
+        game.setMap(mapOne);
+        System.out.println(game.toString());
+   
     }
     
 }
