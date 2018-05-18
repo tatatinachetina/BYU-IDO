@@ -5,15 +5,19 @@
  */
 package citbyui.cit260.model;
 
+import java.util.Objects;
+
 /**
  *
  * @author Jake
  */
-public class ChallengeScene extends Location {
+public class ChallengeScene extends Location{
     private long noCorrect;
     private long requiredCorrect;
-    
-    public ChallengeScene(){
+    private Question question;
+
+    public ChallengeScene(String description, int row, int column, String visited, char displaySimbol, String blocked) {
+        super(description, row, column, visited, displaySimbol, blocked);
     }
 
     public long getNoCorrect() {
@@ -32,11 +36,20 @@ public class ChallengeScene extends Location {
         this.requiredCorrect = requiredCorrect;
     }
 
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 79 * hash + (int) (this.noCorrect ^ (this.noCorrect >>> 32));
-        hash = 79 * hash + (int) (this.requiredCorrect ^ (this.requiredCorrect >>> 32));
+        int hash = 7;
+        hash = 73 * hash + (int) (this.noCorrect ^ (this.noCorrect >>> 32));
+        hash = 73 * hash + (int) (this.requiredCorrect ^ (this.requiredCorrect >>> 32));
+        hash = 73 * hash + Objects.hashCode(this.question);
         return hash;
     }
 
@@ -58,12 +71,16 @@ public class ChallengeScene extends Location {
         if (this.requiredCorrect != other.requiredCorrect) {
             return false;
         }
+        if (!Objects.equals(this.question, other.question)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "ChallengeScene{" + "noCorrect=" + noCorrect + ", requiredCorrect=" + requiredCorrect + '}';
+        return "ChallengeScene{" + "noCorrect=" + noCorrect + ", requiredCorrect=" + requiredCorrect + ", question=" + question + '}';
     }
+
    
 }

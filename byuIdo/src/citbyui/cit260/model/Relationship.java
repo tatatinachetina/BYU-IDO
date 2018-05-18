@@ -38,20 +38,29 @@ public class Relationship implements Serializable{
         this.status = status;
     }
 
-    public Actor getActor() {
-        return actor;
+    public Actor getActorOne() {
+        return actorOne;
     }
 
-    public void setActor(Actor actor) {
-        this.actor = actor;
+    public void setActorOne(Actor actorOne) {
+        this.actorOne = actorOne;
+    }
+
+    public Actor getActorTwo() {
+        return actorTwo;
+    }
+
+    public void setActorTwo(Actor actorTwo) {
+        this.actorTwo = actorTwo;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + (int) (this.relationshipScore ^ (this.relationshipScore >>> 32));
-        hash = 97 * hash + Objects.hashCode(this.status);
-        hash = 97 * hash + Objects.hashCode(this.actor);
+        hash = 89 * hash + (int) (this.relationshipScore ^ (this.relationshipScore >>> 32));
+        hash = 89 * hash + Objects.hashCode(this.status);
+        hash = 89 * hash + Objects.hashCode(this.actorOne);
+        hash = 89 * hash + Objects.hashCode(this.actorTwo);
         return hash;
     }
 
@@ -73,7 +82,10 @@ public class Relationship implements Serializable{
         if (!Objects.equals(this.status, other.status)) {
             return false;
         }
-        if (this.actor != other.actor) {
+        if (this.actorOne != other.actorOne) {
+            return false;
+        }
+        if (this.actorTwo != other.actorTwo) {
             return false;
         }
         return true;
@@ -81,8 +93,9 @@ public class Relationship implements Serializable{
 
     @Override
     public String toString() {
-        return "Relationship{" + "relationshipScore=" + relationshipScore + ", status=" + status + ", actor=" + actor + '}';
+        return "Relationship{" + "relationshipScore=" + relationshipScore + ", status=" + status + ", actorOne=" + actorOne + ", actorTwo=" + actorTwo + '}';
     }
+
 
    
     
