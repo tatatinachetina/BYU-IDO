@@ -2,9 +2,12 @@
 package byuido;
 
 import citbyui.cit260.model.Actor;
+import citbyui.cit260.model.ChallengeScene;
 import citbyui.cit260.model.Game;
 import citbyui.cit260.model.Map;
 import citbyui.cit260.model.Player;
+import citbyui.cit260.model.Question;
+import citbyui.cit260.model.Relationship;
 
 /**
  *
@@ -44,11 +47,20 @@ public class ByuIdo {
         //Location
         
         //Relationship
-        
+        Relationship relationship = new Relationship();
+        relationship.setRelationshipScore(59);
+        relationship.setStatus("Friends");
+        System.out.println(relationship.toString());
         //ChallengeScene
+       
         
         //Question
-        
+        Question question = new Question();
+        question.setQuestion("Where's my hat?!?!");
+        question.setAnswer("over here!");
+        question.setScore(12);
+        question.setAmount(120);
+        System.out.println(question.toString());
         
     }
     
