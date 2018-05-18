@@ -5,11 +5,14 @@
  */
 package citbyui.cit260.model;
 
+import java.io.Serializable;
+import java.util.Objects;
+
 /**
  *
  * @author tanya
  */
-public class Location {
+public class Location implements Serializable {
 
     private String description;
     private int row;
@@ -18,14 +21,108 @@ public class Location {
     private char displaySimbol;
     private String blocked;
 
-    public Location(String description, int row, int column, String visited,
-            char displaySimbol, String blocked) {
+    public Location() {
+    }
+    
+    
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
         this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
         this.column = column;
+    }
+
+    public String getVisited() {
+        return visited;
+    }
+
+    public void setVisited(String visited) {
         this.visited = visited;
+    }
+
+    public char getDisplaySimbol() {
+        return displaySimbol;
+    }
+
+    public void setDisplaySimbol(char displaySimbol) {
         this.displaySimbol = displaySimbol;
+    }
+
+    public String getBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(String blocked) {
         this.blocked = blocked;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 79 * hash + Objects.hashCode(this.description);
+        hash = 79 * hash + this.row;
+        hash = 79 * hash + this.column;
+        hash = 79 * hash + Objects.hashCode(this.visited);
+        hash = 79 * hash + this.displaySimbol;
+        hash = 79 * hash + Objects.hashCode(this.blocked);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Location other = (Location) obj;
+        if (this.row != other.row) {
+            return false;
+        }
+        if (this.column != other.column) {
+            return false;
+        }
+        if (this.displaySimbol != other.displaySimbol) {
+            return false;
+        }
+        if (!Objects.equals(this.description, other.description)) {
+            return false;
+        }
+        if (!Objects.equals(this.visited, other.visited)) {
+            return false;
+        }
+        if (!Objects.equals(this.blocked, other.blocked)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Location{" + "description=" + description + ", row=" + row + ", column=" + column + ", visited=" + visited + ", displaySimbol=" + displaySimbol + ", blocked=" + blocked + '}';
+    }
+    
+    
 
 }

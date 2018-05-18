@@ -20,6 +20,7 @@ public class Game implements Serializable {
     private InventoryItem[] items;
     private Player player;
     private Map map;
+    
 
     public Game() {
     }
