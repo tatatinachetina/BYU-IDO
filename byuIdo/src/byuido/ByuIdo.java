@@ -1,4 +1,3 @@
-
 package byuido;
 
 import citbyui.cit260.model.Actor;
@@ -27,10 +26,14 @@ public class ByuIdo {
         playerOne.setName("Tatatina");
         playerOne.setGender("female");
         playerOne.setBestTime(7.00);
+
+        /*String playerOneName = playerOne.getName();
+        String playerOneGender = playerOne.getGender();
+        double playerOneBestTime = playerOne.getBestTime();
+         */
         System.out.println(playerOne.toString());
 
-        //Actor        
-        System.out.println(Actor.John.toString());
+        
         
         //Inventory Item
         InventoryItem calculator = new InventoryItem();
@@ -55,6 +58,11 @@ public class ByuIdo {
         relationship.setActorOne(Actor.John);
         relationship.setActorTwo(Actor.Anna);
         System.out.println(relationship.toString());
+        
+        //Actor        
+        System.out.println(Actor.John.toString());
+    
+        
         //ChallengeScene
        
         
@@ -74,5 +82,5 @@ public class ByuIdo {
         System.out.println(game.toString());
    
     }
-    
+
 }

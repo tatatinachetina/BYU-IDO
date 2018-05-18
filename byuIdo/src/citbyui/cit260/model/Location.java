@@ -10,6 +10,7 @@ package citbyui.cit260.model;
  * @author tanya
  */
 public class Location {
+
     private String description;
     private int row;
     private int column;
@@ -17,7 +18,8 @@ public class Location {
     private char displaySimbol;
     private String blocked;
 
-    public Location(String description, int row, int column, String visited, char displaySimbol, String blocked) {
+    public Location(String description, int row, int column, String visited,
+            char displaySimbol, String blocked) {
         this.description = description;
         this.row = row;
         this.column = column;
@@ -25,7 +27,5 @@ public class Location {
         this.displaySimbol = displaySimbol;
         this.blocked = blocked;
     }
-    
-    
-    
+
 }

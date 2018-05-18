@@ -55,9 +55,4 @@ public enum Actor implements Serializable {
         return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + ", type=" + type + ", relationships=" + relationships + '}';
     }
 
-    
-    
-    
-    
-    
-            }
+}

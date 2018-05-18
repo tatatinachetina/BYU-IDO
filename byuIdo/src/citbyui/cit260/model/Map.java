@@ -7,6 +7,7 @@ package citbyui.cit260.model;
 
 //serializable interface
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -19,14 +20,13 @@ public class Map implements Serializable {
     private String Description;
     private int rowCount;
     private int columnCount;
-
+    private Location[][] location;
     //Create the default constructor method
     //Do not select any of the attribute variable check boxes 
     //when generating the default constructor
     public Map() {
     }
 
-    //create "getter" and "setter" methods for each of the attribute variable
     public String getDescription() {
         return Description;
     }
@@ -51,13 +51,21 @@ public class Map implements Serializable {
         this.columnCount = columnCount;
     }
 
-    // implement the toString(),equals(), and hashCode() methods
+    public Location[][] getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location[][] location) {
+        this.location = location;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 71 * hash + Objects.hashCode(this.Description);
-        hash = 71 * hash + this.rowCount;
-        hash = 71 * hash + this.columnCount;
+        hash = 53 * hash + Objects.hashCode(this.Description);
+        hash = 53 * hash + this.rowCount;
+        hash = 53 * hash + this.columnCount;
+        hash = 53 * hash + Arrays.deepHashCode(this.location);
         return hash;
     }
 
@@ -82,13 +90,15 @@ public class Map implements Serializable {
         if (!Objects.equals(this.Description, other.Description)) {
             return false;
         }
+        if (!Arrays.deepEquals(this.location, other.location)) {
+            return false;
+        }
         return true;
     }
 
-    //
     @Override
     public String toString() {
-        return "Map{" + "Description=" + Description + ", rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+        return "Map{" + "Description=" + Description + ", rowCount=" + rowCount + ", columnCount=" + columnCount + ", location=" + location + '}';
     }
 
 }
