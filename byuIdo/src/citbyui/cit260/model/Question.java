@@ -6,6 +6,7 @@
 package citbyui.cit260.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -18,6 +19,7 @@ public class Question implements Serializable{
     private String answer;
     private long score;
     private long amount;
+    private ArrayList<ChallengeScene> scene = new ArrayList<>();
 
     public Question() {
     }

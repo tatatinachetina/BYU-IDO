@@ -21,10 +21,9 @@ public enum Actor implements Serializable {
     private final String description;
     private final Point coordinates;
     private final String type;
-    
     private final ArrayList <Relationship> relationships = new ArrayList<>();
 
-    Actor(String name, String description, Point coordinates, String type) {
+    private Actor(String name, String description, Point coordinates, String type) {
         this.name = name;
         this.description = description;
         this.coordinates = coordinates;
@@ -47,10 +46,16 @@ public enum Actor implements Serializable {
         return type;
     }
 
+    public ArrayList<Relationship> getRelationships() {
+        return relationships;
+    }
+
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + ", type=" + type + '}';
+        return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + ", type=" + type + ", relationships=" + relationships + '}';
     }
+
+    
     
     
     
