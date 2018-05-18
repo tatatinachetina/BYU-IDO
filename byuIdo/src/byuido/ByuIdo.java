@@ -52,6 +52,8 @@ public class ByuIdo {
         Relationship relationship = new Relationship();
         relationship.setRelationshipScore(59);
         relationship.setStatus("Friends");
+        relationship.setActorOne(Actor.John);
+        relationship.setActorTwo(Actor.Anna);
         System.out.println(relationship.toString());
         //ChallengeScene
        
@@ -68,6 +70,7 @@ public class ByuIdo {
         game.setCurrentScore(20.75);
         game.setTotalDays(10);
         game.setMap(mapOne);
+        game.setPlayer(playerOne);
         System.out.println(game.toString());
    
     }
