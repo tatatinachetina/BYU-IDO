@@ -13,16 +13,15 @@ import java.util.Objects;
  *
  * @author Jake
  */
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+
     private String name;
     private String gender;
     private double bestTime;
     private ArrayList<Game> games = new ArrayList<Game>();
-    
 
-public Player()  {
-}
+    public Player() {
+    }
 
     public String getName() {
         return name;
@@ -93,8 +92,5 @@ public Player()  {
     public String toString() {
         return "Player{" + "name=" + name + ", gender=" + gender + ", bestTime=" + bestTime + '}';
     }
-    
-    
-    
-    
+
 }

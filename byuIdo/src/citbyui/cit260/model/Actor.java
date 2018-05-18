@@ -11,18 +11,17 @@ import java.util.ArrayList;
 
 public enum Actor implements Serializable {
 
-    John("John", "He likes sports", new Point(1,1), "NPC"),
-    David("David", "He likes math", new Point(1,2), "NPC"),
-    Anna("Anna", "He likes music", new Point(1,3), "NPC"),
-    Gabby("Gabby", "He likes sports", new Point(1,4), "NPC");
-    
-    
+    John("John", "He likes sports", new Point(1, 1), "NPC"),
+    David("David", "He likes math", new Point(1, 2), "NPC"),
+    Anna("Anna", "He likes music", new Point(1, 3), "NPC"),
+    Gabby("Gabby", "He likes sports", new Point(1, 4), "NPC");
+
     private final String name;
     private final String description;
     private final Point coordinates;
     private final String type;
-    
-    private final ArrayList <Relationship> relationships = new ArrayList<>();
+
+    private final ArrayList<Relationship> relationships = new ArrayList<>();
 
     Actor(String name, String description, Point coordinates, String type) {
         this.name = name;
@@ -51,8 +50,5 @@ public enum Actor implements Serializable {
     public String toString() {
         return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + ", type=" + type + '}';
     }
-    
-    
-    
-    
-            }
+
+}

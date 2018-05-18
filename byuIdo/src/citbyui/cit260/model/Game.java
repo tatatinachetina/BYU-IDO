@@ -13,14 +13,14 @@ import java.util.Objects;
  *
  * @author Jake
  */
-public class Game implements Serializable{
+public class Game implements Serializable {
 
     private long totalDays;
     private double currentScore;
     private InventoryItem[] items;
     private Player player;
     private Map map;
-            
+
     public Game() {
     }
 
@@ -110,11 +110,4 @@ public class Game implements Serializable{
         return "Game{" + "totalDays=" + totalDays + ", currentScore=" + currentScore + ", items=" + items + ", player=" + player + ", map=" + map + '}';
     }
 
-   
-
-    
-    
-    
-    
-    
 }
