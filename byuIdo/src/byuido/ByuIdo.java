@@ -1,9 +1,11 @@
 package byuido;
 
+import citbyui.cit260.model.StoreLocation;
 import citbyui.cit260.model.Actor;
 import citbyui.cit260.model.ChallengeScene;
 import citbyui.cit260.model.Game;
 import citbyui.cit260.model.InventoryItem;
+import citbyui.cit260.model.Location;
 import citbyui.cit260.model.Map;
 import citbyui.cit260.model.Player;
 import citbyui.cit260.model.Question;
@@ -44,12 +46,26 @@ public class ByuIdo {
         
         //Map  
         Map mapOne = new Map();
-        mapOne.setDescription("Walmart");
+        mapOne.setDescription("Rexburg");
         mapOne.setRowCount(5);
         mapOne.setColumnCount(5);
         System.out.println(mapOne.toString());
         
         //Location
+        Location locationOne = new Location();
+        locationOne.setDescription("Walmart");
+        locationOne.setRow(2);
+        locationOne.setColumn(2);
+        locationOne.setVisited(true);
+        locationOne.setDisplaySimbol('a');
+        locationOne.setBlocked(false);
+        System.out.println(locationOne.toString());
+        
+        //Store location
+        StoreLocation store = new StoreLocation();
+        store.setInventoryItem(calculator);
+        System.out.println(store.toString());
+        
         
         //Relationship
         Relationship relationship = new Relationship();

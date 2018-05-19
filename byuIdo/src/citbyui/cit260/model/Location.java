@@ -17,9 +17,9 @@ public class Location implements Serializable {
     private String description;
     private int row;
     private int column;
-    private String visited;
+    private boolean visited;
     private char displaySimbol;
-    private String blocked;
+    private boolean blocked;
 
     public Location() {
     }
@@ -49,11 +49,11 @@ public class Location implements Serializable {
         this.column = column;
     }
 
-    public String getVisited() {
+    public boolean getVisited() {
         return visited;
     }
 
-    public void setVisited(String visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
 
@@ -65,11 +65,11 @@ public class Location implements Serializable {
         this.displaySimbol = displaySimbol;
     }
 
-    public String getBlocked() {
+    public boolean getBlocked() {
         return blocked;
     }
 
-    public void setBlocked(String blocked) {
+    public void setBlocked(boolean blocked) {
         this.blocked = blocked;
     }
 

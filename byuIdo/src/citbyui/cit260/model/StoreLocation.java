@@ -1,3 +1,5 @@
+package citbyui.cit260.model;
+
 
 import citbyui.cit260.model.InventoryItem;
 import citbyui.cit260.model.Location;

@@ -20,7 +20,8 @@ public class Map implements Serializable {
     private String Description;
     private int rowCount;
     private int columnCount;
-    private Location[][] location;
+    //composition relationship
+    private Location[][] locations;
     //Create the default constructor method
     //Do not select any of the attribute variable check boxes 
     //when generating the default constructor
@@ -52,11 +53,11 @@ public class Map implements Serializable {
     }
 
     public Location[][] getLocation() {
-        return location;
+        return locations;
     }
 
-    public void setLocation(Location[][] location) {
-        this.location = location;
+    public void setLocation(Location[][] locations) {
+        this.locations = locations;
     }
 
     @Override
@@ -65,7 +66,7 @@ public class Map implements Serializable {
         hash = 53 * hash + Objects.hashCode(this.Description);
         hash = 53 * hash + this.rowCount;
         hash = 53 * hash + this.columnCount;
-        hash = 53 * hash + Arrays.deepHashCode(this.location);
+        hash = 53 * hash + Arrays.deepHashCode(this.locations);
         return hash;
     }
 
@@ -90,7 +91,7 @@ public class Map implements Serializable {
         if (!Objects.equals(this.Description, other.Description)) {
             return false;
         }
-        if (!Arrays.deepEquals(this.location, other.location)) {
+        if (!Arrays.deepEquals(this.locations, other.locations)) {
             return false;
         }
         return true;
@@ -98,7 +99,7 @@ public class Map implements Serializable {
 
     @Override
     public String toString() {
-        return "Map{" + "Description=" + Description + ", rowCount=" + rowCount + ", columnCount=" + columnCount + ", location=" + location + '}';
+        return "Map{" + "Description=" + Description + ", rowCount=" + rowCount + ", columnCount=" + columnCount + ", location=" + locations + '}';
     }
 
 }
