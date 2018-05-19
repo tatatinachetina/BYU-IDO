@@ -19,7 +19,7 @@ public class InventoryItem implements Serializable{
     private String name;
     private String description;
     private Game game;
-    
+
     public InventoryItem() {
     }
 
@@ -64,17 +64,13 @@ public class InventoryItem implements Serializable{
     }
 
     @Override
-    public String toString() {
-        return "InventoryItem{" + "itemType=" + itemType + ", quantityInStock=" + quantityInStock + ", name=" + name + ", description=" + description + '}';
-    }
-
-    @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 11 * hash + Objects.hashCode(this.itemType);
-        hash = 11 * hash + (int) (Double.doubleToLongBits(this.quantityInStock) ^ (Double.doubleToLongBits(this.quantityInStock) >>> 32));
-        hash = 11 * hash + Objects.hashCode(this.name);
-        hash = 11 * hash + Objects.hashCode(this.description);
+        int hash = 5;
+        hash = 47 * hash + Objects.hashCode(this.itemType);
+        hash = 47 * hash + (int) (Double.doubleToLongBits(this.quantityInStock) ^ (Double.doubleToLongBits(this.quantityInStock) >>> 32));
+        hash = 47 * hash + Objects.hashCode(this.name);
+        hash = 47 * hash + Objects.hashCode(this.description);
+        hash = 47 * hash + Objects.hashCode(this.game);
         return hash;
     }
 
@@ -102,8 +98,18 @@ public class InventoryItem implements Serializable{
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
+        if (!Objects.equals(this.game, other.game)) {
+            return false;
+        }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "InventoryItem{" + "itemType=" + itemType + ", quantityInStock=" + quantityInStock + ", name=" + name + ", description=" + description + ", game=" + game + '}';
+    }
+    
+   
     
     
     

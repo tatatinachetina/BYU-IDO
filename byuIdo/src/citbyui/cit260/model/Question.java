@@ -23,8 +23,6 @@ public class Question implements Serializable{
 
     public Question() {
     }
-    
-    
 
     public String getQuestion() {
         return question;
@@ -58,13 +56,22 @@ public class Question implements Serializable{
         this.amount = amount;
     }
 
+    public ArrayList<ChallengeScene> getScene() {
+        return scene;
+    }
+
+    public void setScene(ArrayList<ChallengeScene> scene) {
+        this.scene = scene;
+    }
+
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 11 * hash + Objects.hashCode(this.question);
-        hash = 11 * hash + Objects.hashCode(this.answer);
-        hash = 11 * hash + (int) (this.score ^ (this.score >>> 32));
-        hash = 11 * hash + (int) (this.amount ^ (this.amount >>> 32));
+        hash = 89 * hash + Objects.hashCode(this.question);
+        hash = 89 * hash + Objects.hashCode(this.answer);
+        hash = 89 * hash + (int) (this.score ^ (this.score >>> 32));
+        hash = 89 * hash + (int) (this.amount ^ (this.amount >>> 32));
+        hash = 89 * hash + Objects.hashCode(this.scene);
         return hash;
     }
 
@@ -92,13 +99,16 @@ public class Question implements Serializable{
         if (!Objects.equals(this.answer, other.answer)) {
             return false;
         }
+        if (!Objects.equals(this.scene, other.scene)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Question{" + "question=" + question + ", answer=" + answer + ", score=" + score + ", amount=" + amount + '}';
+        return "Question{" + "question=" + question + ", answer=" + answer + ", score=" + score + ", amount=" + amount + ", scene=" + scene + '}';
     }
-    
+
     
 }

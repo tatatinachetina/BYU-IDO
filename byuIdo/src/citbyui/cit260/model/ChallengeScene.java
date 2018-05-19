@@ -16,8 +16,7 @@ public class ChallengeScene extends Location{
     private long requiredCorrect;
     private Question question;
 
-    public ChallengeScene(String description, int row, int column, String visited, char displaySimbol, String blocked) {
-        super(description, row, column, visited, displaySimbol, blocked);
+    public ChallengeScene() {
     }
 
     public long getNoCorrect() {

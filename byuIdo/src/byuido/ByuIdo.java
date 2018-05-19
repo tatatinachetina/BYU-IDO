@@ -21,7 +21,7 @@ public class ByuIdo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Game
+        
         
         //Player
         Player playerOne = new Player();
@@ -34,22 +34,6 @@ public class ByuIdo {
         double playerOneBestTime = playerOne.getBestTime();
          */
         System.out.println(playerOne.toString());
-
-        
-        
-        //Inventory Item
-        InventoryItem calculator = new InventoryItem();
-        calculator.setItemType("");
-        calculator.setDescription("A Calculator");
-        calculator.setName("Calculator");
-        calculator.setQuantityInStock(1);
-        
-        //Map  
-        Map mapOne = new Map();
-        mapOne.setDescription("Rexburg");
-        mapOne.setRowCount(5);
-        mapOne.setColumnCount(5);
-        System.out.println(mapOne.toString());
         
         //Location
         Location locationOne = new Location();
@@ -61,11 +45,13 @@ public class ByuIdo {
         locationOne.setBlocked(false);
         System.out.println(locationOne.toString());
         
-        //Store location
-        StoreLocation store = new StoreLocation();
-        store.setInventoryItem(calculator);
-        System.out.println(store.toString());
         
+        //Map  
+        Map mapOne = new Map();
+        mapOne.setDescription("Rexburg");
+        mapOne.setRowCount(5);
+        mapOne.setColumnCount(5);
+        System.out.println(mapOne.toString());
         
         //Relationship
         Relationship relationship = new Relationship();
@@ -79,7 +65,7 @@ public class ByuIdo {
         System.out.println(Actor.John.toString());
     
         
-        //ChallengeScene
+        
        
         
         //Question
@@ -89,7 +75,15 @@ public class ByuIdo {
         question.setScore(12);
         question.setAmount(120);
         System.out.println(question.toString());
+       
+        //ChallengeScene
+        ChallengeScene sceneOne = new ChallengeScene();
+        sceneOne.setNoCorrect(0);
+        sceneOne.setRequiredCorrect(1);
+        sceneOne.setQuestion(question);
+        System.out.println(sceneOne.toString());
         
+        //Game
         Game game = new Game();
         game.setCurrentScore(20.75);
         game.setTotalDays(10);
@@ -97,6 +91,19 @@ public class ByuIdo {
         game.setPlayer(playerOne);
         System.out.println(game.toString());
    
+        //Inventory Item
+        InventoryItem itemOne = new InventoryItem();
+        itemOne.setItemType("Store Item");
+        itemOne.setDescription("A Calculator");
+        itemOne.setName("Calculator");
+        itemOne.setQuantityInStock(1);
+        itemOne.setGame(game);
+        System.out.println(itemOne.toString());
+        
+        //Store location
+        StoreLocation store = new StoreLocation();
+        store.setInventoryItem(itemOne);
+        System.out.println(store.toString());
     }
 
 }

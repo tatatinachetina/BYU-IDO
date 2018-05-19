@@ -17,23 +17,21 @@ import java.util.Objects;
 public class Map implements Serializable {
 
     //class instance variables
-    private String Description;
+    private String description;
     private int rowCount;
     private int columnCount;
     //composition relationship
-    private Location[][] locations;
-    //Create the default constructor method
-    //Do not select any of the attribute variable check boxes 
-    //when generating the default constructor
+    private Location[][] location;
+
     public Map() {
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
-    public void setDescription(String Description) {
-        this.Description = Description;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getRowCount() {
@@ -53,20 +51,20 @@ public class Map implements Serializable {
     }
 
     public Location[][] getLocation() {
-        return locations;
+        return location;
     }
 
-    public void setLocation(Location[][] locations) {
-        this.locations = locations;
+    public void setLocation(Location[][] location) {
+        this.location = location;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.Description);
-        hash = 53 * hash + this.rowCount;
-        hash = 53 * hash + this.columnCount;
-        hash = 53 * hash + Arrays.deepHashCode(this.locations);
+        int hash = 3;
+        hash = 97 * hash + Objects.hashCode(this.description);
+        hash = 97 * hash + this.rowCount;
+        hash = 97 * hash + this.columnCount;
+        hash = 97 * hash + Arrays.deepHashCode(this.location);
         return hash;
     }
 
@@ -88,10 +86,10 @@ public class Map implements Serializable {
         if (this.columnCount != other.columnCount) {
             return false;
         }
-        if (!Objects.equals(this.Description, other.Description)) {
+        if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (!Arrays.deepEquals(this.locations, other.locations)) {
+        if (!Arrays.deepEquals(this.location, other.location)) {
             return false;
         }
         return true;
@@ -99,7 +97,8 @@ public class Map implements Serializable {
 
     @Override
     public String toString() {
-        return "Map{" + "Description=" + Description + ", rowCount=" + rowCount + ", columnCount=" + columnCount + ", location=" + locations + '}';
+        return "Map{" + "description=" + description + ", rowCount=" + rowCount + ", columnCount=" + columnCount + ", location=" + location + '}';
     }
-
+    
+    
 }
