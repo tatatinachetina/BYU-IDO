@@ -13,5 +13,9 @@ public class StartProgramView {
     
     public StartProgramView() {
     }
+   public void displayStartProgramView(){
+ 
+
+    }
     
 }
