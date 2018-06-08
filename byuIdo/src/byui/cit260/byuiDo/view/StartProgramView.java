@@ -14,8 +14,36 @@ public class StartProgramView {
     public StartProgramView() {
     }
    public void displayStartProgramView(){
+   
+       boolean endOfView = false;
+ do {
+    String[] inputs = this.getInputs();
+ if (inputs.length == 0 || inputs.equals('Q') || inputs.equals('q')){
+     
+ }
+    //no inputs were entered OR the first input is Q
  
+endOfView = doAction(inputs);}
+while (endOfView != true); 
+         {
+   
+   }
+ 
+   
+}
 
+    private String[] getInputs() {
+        System.out.println("");
+        System.out.println("");
+        String[] inputs = new String[1];
+        inputs[0] = "testInputs";
+        return inputs;
     }
-    
+
+    private boolean doAction(String[] inputs) {
+        System.out.println("doAction() called");
+        System.out.println("\tinputs = " + inputs[0]);
+        
+        return true;
+    }
 }
