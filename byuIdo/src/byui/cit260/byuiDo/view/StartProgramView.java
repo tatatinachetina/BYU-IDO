@@ -19,11 +19,8 @@ public class StartProgramView {
  do {
     String[] inputs = this.getInputs();
  if (inputs.length == 0 || inputs.equals('Q') || inputs.equals('q')){
-     
- }
-    //no inputs were entered OR the first input is Q
- 
 endOfView = doAction(inputs);}
+ }
 while (endOfView != true); 
          {
    
