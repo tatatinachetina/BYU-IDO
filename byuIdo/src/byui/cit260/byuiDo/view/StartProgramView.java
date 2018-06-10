@@ -40,15 +40,22 @@ public class StartProgramView {
         String[] inputs = new String[1];
 
         //Display a description of the view 
-        System.out.println("**** Get Inputs ***");
-
+        System.out.println("****************************************************");
+        System.out.println("* The game is a text-based dating simulator game.  *");
+        System.out.println("* You are a student at BYU-I, and you haven't been *");
+        System.out.println("* able to go on many dates in the past and the     *");
+        System.out.println("* the semester is coming to a close in ten days!   *");
+        System.out.println("* Your goal is to break the cycle and meet the     *");
+        System.out.println("* person of your dreams                            *");
+        System.out.println("* Good luck!                                       *");
+        System.out.println("****************************************************");
         //valid = false 
         boolean valid = false;
 
         //WHILE valid == false (no input value has been entered) 
         while (valid == false) {
             //Display the prompt message 
-            System.out.println("**** Display the prompt message  ***");
+            System.out.println("Enter your name below:");
 
             //Get the value entered from the keyboard 
             Scanner inFile;

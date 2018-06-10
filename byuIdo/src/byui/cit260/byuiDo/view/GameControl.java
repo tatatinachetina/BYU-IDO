@@ -5,6 +5,7 @@
  */
 package byui.cit260.byuiDo.view;
 
+import byuido.ByuIdo;
 import citbyui.cit260.model.Player;
 
 /**
@@ -13,9 +14,16 @@ import citbyui.cit260.model.Player;
  */
 class GameControl {
 
-   public static Player savePlayer(String playersName) {
-       System.out.println("*** savePlayer() called ***"); 
-       return new Player();
+    //savePlayer(name): Player 
+    public static Player savePlayer(String playersName) {
+        if (playersName == null || playersName.length() < 1) {
+            return null;
+        }
+        Player player = new Player();
+        player.setName(playersName);
+        ByuIdo.setPlayer(player);
+
+        return new Player();
     }
-    
+
 }
