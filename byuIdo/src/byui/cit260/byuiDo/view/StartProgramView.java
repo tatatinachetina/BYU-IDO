@@ -28,8 +28,7 @@ public class StartProgramView {
             endOfView = doAction(inputs);
 
         } while (endOfView != true);
-        {
-        }
+        
 
     }
 
@@ -93,7 +92,7 @@ public class StartProgramView {
         }
         //Display
         System.out.println("================================================= ");
-        System.out.println("Welcome to the game " + playersName);
+        System.out.println("Welcome to the game " + playersName + "!");
         System.out.println("We hope you have a lot of fun!");
         System.out.println("================================================= ");
         
