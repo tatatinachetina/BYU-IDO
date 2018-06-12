@@ -100,9 +100,6 @@ public class StartProgramView {
         MainMenuView mainMenuView = new MainMenuView();
         //mainMenuView.displayMainMenuView()
         mainMenuView.displayMainMenuView();
-        //RETURN true 
-        // System.out.println("**** doAction() called ***");
-        // System.out.println("\tinputs = " + inputs[0]);
         return true;
     }
 }

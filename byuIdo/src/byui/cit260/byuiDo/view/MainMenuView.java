@@ -6,6 +6,7 @@
 package byui.cit260.byuiDo.view;
 
 import byuido.ByuIdo;
+
 import java.util.Scanner;
 
 /**
@@ -67,25 +68,32 @@ class MainMenuView {
                 break;
             case "Q":
                 return true;
-              
-            default: System.out.println("Invalid menu item");
+
+            default:
+                System.out.println("Invalid menu item");
         }
         return false;
     }
 
     private void startNewGame() {
-      GameControle game = new Game();
         GameControl.createNewGame(ByuIdo.getPlayer());
-       gameMenuView = createNewGame
-       gameMenuView.displayGameMenuView();
+        //gameMenuView = create a new GameMenuView object
+        GameMenuView gameMenu = new GameMenuView();
+        //gameMenuView.displayGameMenuView();
+        gameMenu.displayGameMenuView();
+
     }
 
     private void restartGame() {
-       
+//        startExistingGameView = Create a new StartExistingGameView
+        StartExistingGameView startExistingGame = new StartExistingGameView();
+//        startExistingGameView.displayStartExistingGameView(); 
+        startExistingGame.displayStartExistingGame();
     }
 
     private void getHelp() {
-   
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayHelpMenuView();
     }
 
 }
