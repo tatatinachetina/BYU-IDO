@@ -80,7 +80,7 @@ class MainMenuView {
         GameControl.createNewGame(ByuIdo.getPlayer());
         //gameMenuView = create a new GameMenuView object
         GameMenuView gameMenu = new GameMenuView();
-        //gameMenuView.displayGameMenuView();
+        //gameMenuView.displayGameMenuViezw();
         gameMenu.displayGameMenuView();
 
     }
