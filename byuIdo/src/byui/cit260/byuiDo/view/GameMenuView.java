@@ -11,6 +11,9 @@ package byui.cit260.byuiDo.view;
  */
 class GameMenuView {
 
+    public GameMenuView() {
+    }
+
     void displayGameMenuView() {
         System.out.println("displayGameMenuView()");
     }
