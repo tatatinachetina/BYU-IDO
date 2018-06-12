@@ -11,6 +11,9 @@ package byui.cit260.byuiDo.view;
  */
 class HelpMenuView {
 
+    public HelpMenuView() {
+    }
+
     void displayHelpMenuView() {
         System.out.println("displayHelpMenuView()");    }
     

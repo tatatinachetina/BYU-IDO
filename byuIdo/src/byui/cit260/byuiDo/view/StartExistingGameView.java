@@ -11,6 +11,9 @@ package byui.cit260.byuiDo.view;
  */
 class StartExistingGameView {
 
+    public StartExistingGameView() {
+    }
+
     void displayStartExistingGame() {
         System.out.println("displayStartExistingGame()");    }
     
