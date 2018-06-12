@@ -33,11 +33,15 @@ class MainMenuView {
     private String[] getInputs() {
 
         String[] inputs = new String[1];
-
-        System.out.println("*** Display instructions ***");
+        System.out.println("****************************************************");
+        System.out.println("* N - Start New Game                               *");
+        System.out.println("* R - Restart Existing Game                        *");
+        System.out.println("* H - Get help on how to play the game             *");
+        System.out.println("* Q - Quit Game                                    *"); 
+        System.out.println("****************************************************");
         boolean valid = false;
         while (valid == false) {
-            System.out.println("Display the prompt message");
+            System.out.println("Enter letter below:");
             Scanner inFile;
             inFile = new Scanner(System.in);
 
@@ -80,7 +84,7 @@ class MainMenuView {
         GameControl.createNewGame(ByuIdo.getPlayer());
         //gameMenuView = create a new GameMenuView object
         GameMenuView gameMenu = new GameMenuView();
-        //gameMenuView.displayGameMenuViezw();
+        //gameMenuView.displayGameMenuView();
         gameMenu.displayGameMenuView();
 
     }

@@ -30,8 +30,15 @@ class HelpMenuView {
     private String[] getInputs() {
        
         String[] inputs = new String[1];
-
-        System.out.println("*** Display instructions ***");
+        System.out.println("****************************************************");
+        System.out.println("* G - What is the Goal of the game                 *");
+        System.out.println("* M - How to move                                  *");
+        System.out.println("* C - How to initiate conversation                 *");
+        System.out.println("* D - How to go on a date                          *");
+        System.out.println("* E - How to earn money                            *");
+        System.out.println("* R - How to look representable                    *");
+        System.out.println("* Q - Quit Game                                    *");
+        System.out.println("****************************************************");
         boolean valid = false;
         while (valid == false) {
             System.out.println("Display the prompt message");
@@ -41,7 +48,7 @@ class HelpMenuView {
             //Trim off leading and trailing blanks from the value 
             inputs[0] = inFile.nextLine().trim();
             if (inputs[0].length() < 1) {
-                System.out.println("You must enter a value");
+                System.out.println("Enter letter below:");
                 continue;
             }
             valid = true;
