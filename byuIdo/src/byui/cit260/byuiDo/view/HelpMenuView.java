@@ -37,11 +37,11 @@ class HelpMenuView {
         System.out.println("* D - How to go on a date                          *");
         System.out.println("* E - How to earn money                            *");
         System.out.println("* R - How to look representable                    *");
-        System.out.println("* Q - Quit Game                                    *");
+        System.out.println("* Q - Go back                                      *");
         System.out.println("****************************************************");
         boolean valid = false;
         while (valid == false) {
-            System.out.println("Display the prompt message");
+            System.out.println("You must enter a value");
             Scanner inFile;
             inFile = new Scanner(System.in);
 
