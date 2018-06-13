@@ -5,6 +5,8 @@
  */
 package byui.cit260.byuiDo.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Jake
@@ -15,7 +17,115 @@ class GameMenuView {
     }
 
     void displayGameMenuView() {
-        System.out.println("displayGameMenuView()");
+        boolean endOfView = false;
+        do {
+            String[] inputs = this.getInputs();
+            if (inputs[0].toUpperCase().equals("Q") || inputs.length == 0) {
+                return;
+            }
+            endOfView = doAction(inputs);
+
+        } while (endOfView != true);
     }
-    
+
+    private String[] getInputs() {
+String[] inputs = new String[1];
+        System.out.println("****************************************************");
+        System.out.println("* M - Map                                          *");
+        System.out.println("* W - Where am I                                   *");
+        System.out.println("* C - Initiate Conversation                        *");
+        System.out.println("* A - Ask out on date                              *");
+        System.out.println("* R - View relationship status                     *");
+        System.out.println("* I - View inventory                               *");
+        System.out.println("* P - Shop                                         *");
+        System.out.println("* S - Save Game                                    *");
+        System.out.println("* Q - Go back to main menue                        *");
+        System.out.println("****************************************************");
+        boolean valid = false;
+        while (valid == false) {
+            System.out.println("You must enter a value");
+            Scanner inFile;
+            inFile = new Scanner(System.in);
+
+            //Trim off leading and trailing blanks from the value 
+            inputs[0] = inFile.nextLine().trim();
+            if (inputs[0].length() < 1) {
+                System.out.println("Enter letter below:");
+                continue;
+            }
+            valid = true;
+        }
+
+        return inputs;
+    }
+
+    private boolean doAction(String[] inputs) {
+String menuItem = inputs[0];
+        menuItem = menuItem.toUpperCase();
+        switch (menuItem) {
+            case "M":
+                this.getMap();
+                break;
+            case "W":
+                this.getWhereAmI();
+                break;
+            case "C":
+                this.startConversation();                
+                break;
+            case "A":
+                this.askToStartDate();
+                break;
+            case "R":
+                this.getRelationshipStatus();
+                break;
+            case "I":
+                this.viewInventory();
+                break;
+            case "P":
+                this.goToShop();
+                break;
+            case "S":
+                this.saveGame();
+                break;
+            case "Q":
+                return true;    
+
+            default:
+                System.out.println("Invalid menu item");
+        }
+        return false;
+    }
+
+    private void getMap() {
+  
+    }
+
+    private void getWhereAmI() {
+
+    }
+
+    private void startConversation() {
+ 
+    }
+
+    private void askToStartDate() {
+
+    }
+
+    private void getRelationshipStatus() {
+
+    }
+
+    private void viewInventory() {
+
+    }
+
+    private void saveGame() {
+
+    }
+
+    private void goToShop() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
