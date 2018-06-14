@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author Jake
  */
-class GameMenuView {
+class JobMenuView {
 
-    public GameMenuView() {
+    public JobMenuView() {
     }
 
-    void displayGameMenuView() {
+    void displayJobMenu() {
         boolean endOfView = false;
         do {
             String[] inputs = this.getInputs();
@@ -31,15 +31,8 @@ class GameMenuView {
     private String[] getInputs() {
 String[] inputs = new String[1];
         System.out.println("****************************************************");
-        System.out.println("* M - Map                                          *");
-        System.out.println("* W - Where am I                                   *");
-        System.out.println("* C - Initiate Conversation                        *");
-        System.out.println("* A - Ask out on date                              *");
-        System.out.println("* R - View relationship status                     *");
-        System.out.println("* I - View inventory                               *");
-        System.out.println("* P - Shop                                         *");
-        System.out.println("* J - Go to Work                                   *");
-        System.out.println("* S - Save Game                                    *");
+        System.out.println("* P - Perform good deeds                           *");
+        System.out.println("* E - End shift, get paid!                         *");
         System.out.println("* Q - Go back to main menue                        *");
         System.out.println("****************************************************");
         boolean valid = false;
@@ -64,31 +57,11 @@ String[] inputs = new String[1];
 String menuItem = inputs[0];
         menuItem = menuItem.toUpperCase();
         switch (menuItem) {
-            case "M":
-                this.getMap();
-                break;
-            case "W":
-                this.getWhereAmI();
-                break;
-            case "C":
-                this.startConversation();                
-                break;
-            case "A":
-                this.askToStartDate();
-                break;
-            case "R":
-                this.getRelationshipStatus();
-                break;
-            case "I":
-                this.viewInventory();
-                break;
             case "P":
-                this.goToShop();
-            case "J":
-                this.goToWork();
+                this.doGoodDeeds();
                 break;
-            case "S":
-                this.saveGame();
+            case "E":
+                this.endShift();
                 break;
             case "Q":
                 return true;    
@@ -99,41 +72,12 @@ String menuItem = inputs[0];
         return false;
     }
 
-    private void getMap() {
-  
-    }
-
-    private void getWhereAmI() {
-
-    }
-
-    private void startConversation() {
- 
-    }
-
-    private void askToStartDate() {
-
-    }
-
-    private void getRelationshipStatus() {
-
-    }
-
-    private void viewInventory() {
-
-    }
-
-    private void saveGame() {
-
-    }
-
-    private void goToShop() {
+    private void doGoodDeeds() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void goToWork() {
-        JobMenuView jobMenu = new JobMenuView();
-        jobMenu.displayJobMenu();
+    private void endShift() {
+    
     }
-
+    
 }
