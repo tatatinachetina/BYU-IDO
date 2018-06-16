@@ -5,7 +5,7 @@
  */
 package byui.cit260.byuiDo.view;
 
-import citbyui.cit260.control.StoreControl;
+import citbyui.cit260.control.storeControl;
 import citbyui.cit260.model.Player;
 import java.util.Scanner;
 
@@ -19,7 +19,6 @@ public class ItemsPriceMenuView {
     }
 
     public void displayItemsPriceMenuView() {
-
         boolean endOfView = false;
         do {
             String[] inputs = this.getInputs();
@@ -123,10 +122,10 @@ public class ItemsPriceMenuView {
         // TODO - get the price of the item
         String strAmmount = inputs[1];
         double ammount = Double.parseDouble(strAmmount);
-        double total = StoreControl.calcTotalPrice(15, ammount);
+        double total = storeControl.calcTotalPrice(15, ammount);
 
         if (total <= 0) {
-            System.out.println("Please chek the valid number of items");
+            System.out.println("Please check the valid number of items");
             return false;
         }
         System.out.println("Thank you for the purchase from Walmart!");

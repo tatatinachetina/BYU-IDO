@@ -130,7 +130,8 @@ String menuItem = inputs[0];
     }
 
     private void goToShop() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        StoreMenuView storeMenu = new StoreMenuView();
+        storeMenu.displayShopMenuView();
     }
 
     private void goToWork() {
