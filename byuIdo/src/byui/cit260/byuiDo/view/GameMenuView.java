@@ -108,11 +108,13 @@ String menuItem = inputs[0];
     }
 
     private void startConversation() {
- 
+     ConversationMenuView conversationMenu = new ConversationMenuView();
+     conversationMenu.displayConversationMenu();
     }
 
     private void askToStartDate() {
-
+    DateMenuView dateMenu = new DateMenuView();
+     dateMenu.displayDateMenu();
     }
 
     private void getRelationshipStatus() {
@@ -128,8 +130,8 @@ String menuItem = inputs[0];
     }
 
     private void goToShop() {
-        StoreMenuView storeMenu =  new StoreMenuView();
-        storeMenu.displayStoreMenuView();
+        StoreMenuView storeMenu = new StoreMenuView();
+        storeMenu.displayShopMenuView();
     }
 
     private void goToWork() {

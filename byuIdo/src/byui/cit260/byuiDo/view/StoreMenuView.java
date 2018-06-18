@@ -94,6 +94,8 @@ public class StoreMenuView {
     }
 
     private void getWares() {
+   ItemsPriceMenuView itemsPriceMenu = new ItemsPriceMenuView();
+   itemsPriceMenu.displayItemsPriceMenuView();
     }
 
     private void getShop() {
