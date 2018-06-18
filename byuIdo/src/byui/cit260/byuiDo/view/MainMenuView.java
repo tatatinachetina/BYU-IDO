@@ -16,6 +16,9 @@ import java.util.Scanner;
  */
 class MainMenuView {
 
+    public MainMenuView() {
+    }
+
     void displayMainMenuView() {
 
         boolean endOfView = false;
@@ -37,7 +40,7 @@ class MainMenuView {
         System.out.println("* N - Start New Game                               *");
         System.out.println("* R - Restart Existing Game                        *");
         System.out.println("* H - Get help on how to play the game             *");
-        System.out.println("* Q - Quit Game                                    *"); 
+        System.out.println("* Q - Quit Game                                    *");
         System.out.println("****************************************************");
         boolean valid = false;
         while (valid == false) {
