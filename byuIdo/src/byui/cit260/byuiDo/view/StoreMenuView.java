@@ -1,6 +1,5 @@
 package byui.cit260.byuiDo.view;
 
-
 import java.util.Scanner;
 
 /*
@@ -8,13 +7,16 @@ import java.util.Scanner;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author tanya
  */
 public class StoreMenuView {
-    public void displayShopMenuView() {
+
+    public StoreMenuView() {
+    }
+
+    public void displayStoreMenuView() {
 
         boolean endOfView = false;
         do {
@@ -25,7 +27,6 @@ public class StoreMenuView {
             endOfView = doAction(inputs);
 
         } while (endOfView != true);
-        
 
     }
 
@@ -38,8 +39,9 @@ public class StoreMenuView {
         //Display a description of the view 
         System.out.println("****************************************************");
         System.out.println("* Welcome to Walmart shop                          *");
-        System.out.println("* Here you can buy all kind of items for your      *");
-        System.out.println("* How can I help you?                              *");
+        System.out.println("* Here you can buy all kind of items for  all your *");
+        System.out.println("* dating needs.                                    *");
+        System.out.println("* My name is Rex:) How can I help you?             *");
         System.out.println("* Choose the option below:                         *");
         System.out.println("* W - Browse Wares                                 *");
         System.out.println("* B - Buy Items                                    *");
@@ -73,7 +75,7 @@ public class StoreMenuView {
     }
 
     private boolean doAction(String[] inputs) {
-    String menuItem = inputs[0];
+        String menuItem = inputs[0];
         menuItem = menuItem.toUpperCase();
         switch (menuItem) {
             case "W":
@@ -83,7 +85,7 @@ public class StoreMenuView {
                 this.getShop();
                 break;
             case "Q":
-                return true;    
+                return true;
 
             default:
                 System.out.println("Invalid menu item");
@@ -95,5 +97,9 @@ public class StoreMenuView {
     }
 
     private void getShop() {
+        ItemsPriceMenuView itemsPriceMenu =  new ItemsPriceMenuView();
+        itemsPriceMenu.displayItemsPriceMenuView();
+        
+      
     }
 }
