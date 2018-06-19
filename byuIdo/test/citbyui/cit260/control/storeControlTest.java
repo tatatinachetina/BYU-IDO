@@ -29,7 +29,7 @@ public class storeControlTest {
         double itemPrice = 5.0;
         double itemAmount = 3.0;
         double expResult = 15.9;
-        double result = StoreControl.calcTotalPrice(itemPrice, itemAmount);
+        double result = storeControl.calcTotalPrice(itemPrice, itemAmount);
         assertEquals(expResult, result, 0.01);
 
         // ---Test case 2 ---
@@ -37,7 +37,7 @@ public class storeControlTest {
         itemPrice = 0.0;
         itemAmount = 3.0;
         expResult = -1;
-        result = StoreControl.calcTotalPrice(itemPrice, itemAmount);
+        result = storeControl.calcTotalPrice(itemPrice, itemAmount);
         assertEquals(expResult, result, 0.0001);
 
         // ---Test case 3 ---
@@ -45,7 +45,7 @@ public class storeControlTest {
         itemPrice = 5.0;
         itemAmount = 0.0;
         expResult = -1;
-        result = StoreControl.calcTotalPrice(itemPrice, itemAmount);
+        result = storeControl.calcTotalPrice(itemPrice, itemAmount);
         assertEquals(expResult, result, 0.0001);
 
         // ---Test case 4 ---
@@ -53,7 +53,7 @@ public class storeControlTest {
         itemPrice = 5.0;
         itemAmount = 21.0;
         expResult = -1;
-        result = StoreControl.calcTotalPrice(itemPrice, itemAmount);
+        result = storeControl.calcTotalPrice(itemPrice, itemAmount);
         assertEquals(expResult, result, 0.0001);
 
         // ---Test case 5 ---
@@ -61,7 +61,7 @@ public class storeControlTest {
         itemPrice = 1.0;
         itemAmount = 3.0;
         expResult = 3.18;
-        result = StoreControl.calcTotalPrice(itemPrice, itemAmount);
+        result = storeControl.calcTotalPrice(itemPrice, itemAmount);
         assertEquals(expResult, result, 0.0001);
 
         // ---Test case 6 ---
@@ -69,7 +69,7 @@ public class storeControlTest {
         itemPrice = 3.0;
         itemAmount = 1.0;
         expResult = 3.18;
-        result = StoreControl.calcTotalPrice(itemPrice, itemAmount);
+        result = storeControl.calcTotalPrice(itemPrice, itemAmount);
         assertEquals(expResult, result, 0.0001);
 
         // ---Test case 7 ---
@@ -77,7 +77,7 @@ public class storeControlTest {
         itemPrice = 1.0;
         itemAmount = 20.0;
         expResult = 21.20;
-        result = StoreControl.calcTotalPrice(itemPrice, itemAmount);
+        result = storeControl.calcTotalPrice(itemPrice, itemAmount);
         assertEquals(expResult, result, 0.0001);
 
     }

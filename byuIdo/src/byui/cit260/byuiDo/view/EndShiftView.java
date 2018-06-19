@@ -79,7 +79,7 @@ class EndShiftView {
             return false;
         }
         if (wage == -2) {
-            System.out.println("wait, we need to pay you!!!");
+            System.out.println("WAIT, WE NEED TO PAY YOU!!!");
             return false;
         }
 
