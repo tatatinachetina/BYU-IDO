@@ -5,7 +5,7 @@
  */
 package byui.cit260.byuiDo.view;
 
-import citbyui.cit260.control.jobControl;
+import byui.cit260.byuiDo.control.jobControl;
 import java.util.Scanner;
 
 /**

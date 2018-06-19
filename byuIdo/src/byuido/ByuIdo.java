@@ -1,16 +1,16 @@
 package byuido;
 
 import byui.cit260.byuiDo.view.StartProgramView;
-import citbyui.cit260.model.StoreLocation;
-import citbyui.cit260.model.Actor;
-import citbyui.cit260.model.ChallengeScene;
-import citbyui.cit260.model.Game;
-import citbyui.cit260.model.InventoryItem;
-import citbyui.cit260.model.Location;
-import citbyui.cit260.model.Map;
-import citbyui.cit260.model.Player;
-import citbyui.cit260.model.Question;
-import citbyui.cit260.model.Relationship;
+import byui.cit260.byuiDo.model.StoreLocation;
+import byui.cit260.byuiDo.model.Actor;
+import byui.cit260.byuiDo.model.ChallengeScene;
+import byui.cit260.byuiDo.model.Game;
+import byui.cit260.byuiDo.model.InventoryItem;
+import byui.cit260.byuiDo.model.Location;
+import byui.cit260.byuiDo.model.Map;
+import byui.cit260.byuiDo.model.Player;
+import byui.cit260.byuiDo.model.Question;
+import byui.cit260.byuiDo.model.Relationship;
 
 /**
  *
