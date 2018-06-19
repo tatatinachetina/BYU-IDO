@@ -5,8 +5,8 @@
  */
 package byui.cit260.byuiDo.view;
 
-import citbyui.cit260.control.storeControl;
-import citbyui.cit260.model.Player;
+import byui.cit260.byuiDo.control.storeControl;
+import byui.cit260.byuiDo.model.Player;
 import java.util.Scanner;
 
 /**

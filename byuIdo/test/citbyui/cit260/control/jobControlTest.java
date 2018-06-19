@@ -5,6 +5,7 @@
  */
 package citbyui.cit260.control;
 
+import byui.cit260.byuiDo.control.jobControl;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package citbyui.cit260.model;
+package byui.cit260.byuiDo.model;
 
 import java.io.Serializable;
 import java.util.Arrays;

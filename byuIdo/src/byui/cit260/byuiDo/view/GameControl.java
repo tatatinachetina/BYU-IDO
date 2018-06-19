@@ -6,7 +6,7 @@
 package byui.cit260.byuiDo.view;
 
 import byuido.ByuIdo;
-import citbyui.cit260.model.Player;
+import byui.cit260.byuiDo.model.Player;
 
 /**
  *

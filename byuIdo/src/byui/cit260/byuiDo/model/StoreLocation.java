@@ -1,8 +1,8 @@
-package citbyui.cit260.model;
+package byui.cit260.byuiDo.model;
 
 
-import citbyui.cit260.model.InventoryItem;
-import citbyui.cit260.model.Location;
+import byui.cit260.byuiDo.model.InventoryItem;
+import byui.cit260.byuiDo.model.Location;
 import java.util.Objects;
 
 /*
