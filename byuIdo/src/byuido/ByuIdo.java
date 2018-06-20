@@ -24,7 +24,7 @@ public class ByuIdo {
     public static void main(String[] args) {
         
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();
+        startProgramView.display();
        
     }
 

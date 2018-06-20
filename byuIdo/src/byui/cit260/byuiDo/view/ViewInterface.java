@@ -12,6 +12,6 @@ package byui.cit260.byuiDo.view;
 interface ViewInterface {
     public void display();
     public String[] getInputs();
-    public String getInputs(String promptMessage);
+    public String getInput(String promptMessage);
     public boolean doAction(String[] inputs);
 }
