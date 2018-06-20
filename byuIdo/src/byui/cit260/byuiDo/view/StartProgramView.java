@@ -20,7 +20,16 @@ public class StartProgramView extends View{
 
     //get players name
     public String[] getInputs() {
-        String[] inputs = new String[1];
+        String[] inputs = new String[1]; 
+        System.out.println("****************************************************");
+        System.out.println("* The game is a text-based dating simulator game.  *");
+        System.out.println("* You are a student at BYU-I, and you haven't been *");
+        System.out.println("* able to go on many dates in the past and the     *");
+        System.out.println("* the semester is coming to a close in ten days!   *");
+        System.out.println("* Your goal is to break the cycle and meet the     *");
+        System.out.println("* person of your dreams                            *");
+        System.out.println("* Good luck!                                       *");
+        System.out.println("****************************************************");
         String playersName = this.getInput("\nPlease enter name.");
         inputs[0] = playersName;
        return inputs;
