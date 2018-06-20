@@ -32,7 +32,7 @@ class EndShiftView {
     private String[] getInputs() {
         String[] inputs = new String[2];
         System.out.println("****************************************************");
-        System.out.println("* Enter hours worked and how much we pay you                          *");
+        System.out.println("* Enter hours worked and how much we pay you       *");
         System.out.println("****************************************************");
         boolean valid = false;
         while (valid == false) {

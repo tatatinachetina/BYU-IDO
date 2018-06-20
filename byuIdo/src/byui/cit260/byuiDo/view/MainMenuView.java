@@ -20,7 +20,6 @@ class MainMenuView {
     }
 
     void displayMainMenuView() {
-
         boolean endOfView = false;
         do {
             String[] inputs = this.getInputs();
