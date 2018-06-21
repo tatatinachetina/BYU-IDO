@@ -28,8 +28,8 @@ class HelpMenuView extends View{
         System.out.println("* R - How to look representable                    *");
         System.out.println("* Q - Go back                                      *");
         System.out.println("****************************************************");
-       String playersName = this.getInput("\nEnter letter below:");
-        inputs[0] = playersName;
+       String input = this.getInput("\nEnter letter below:");
+        inputs[0] = input;
        return inputs;
     }
 

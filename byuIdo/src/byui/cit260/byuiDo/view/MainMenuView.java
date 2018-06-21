@@ -14,25 +14,14 @@ import java.util.Scanner;
  *
  * @author Jake
  */
-class MainMenuView {
+class MainMenuView extends View{
 
     public MainMenuView() {
     }
 
-    void displayMainMenuView() {
-        boolean endOfView = false;
-        do {
-            String[] inputs = this.getInputs();
-            if (inputs[0].toUpperCase().equals("Q") || inputs.length == 0) {
-                return;
-            }
-            endOfView = doAction(inputs);
+    
 
-        } while (endOfView != true);
-
-    }
-
-    private String[] getInputs() {
+    public String[] getInputs() {
 
         String[] inputs = new String[1];
         System.out.println("****************************************************");
@@ -41,26 +30,13 @@ class MainMenuView {
         System.out.println("* H - Get help on how to play the game             *");
         System.out.println("* Q - Quit Game                                    *");
         System.out.println("****************************************************");
-        boolean valid = false;
-        while (valid == false) {
-            System.out.println("Enter letter below:");
-            Scanner inFile;
-            inFile = new Scanner(System.in);
-
-            //Trim off leading and trailing blanks from the value 
-            inputs[0] = inFile.nextLine().trim();
-            if (inputs[0].length() < 1) {
-                System.out.println("You must enter a value");
-                continue;
-            }
-            valid = true;
-        }
-
-        return inputs;
+        String input = this.getInput("\nEnter letter below:");
+        inputs[0] = input;
+       return inputs;
     }
 
     //doAction(inputs): boolean 
-    private boolean doAction(String[] inputs) {
+    public boolean doAction(String[] inputs) {
         String menuItem = inputs[0];
         menuItem = menuItem.toUpperCase();
         switch (menuItem) {
