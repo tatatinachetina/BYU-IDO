@@ -11,23 +11,12 @@ import java.util.Scanner;
  *
  * @author Jake
  */
-class HelpMenuView {
+class HelpMenuView extends View{
 
     public HelpMenuView() {
     }
 
-    void displayHelpMenuView() {
-        boolean endOfView = false;
-    do {
-            String[] inputs = this.getInputs();
-            if (inputs[0].toUpperCase().equals("Q") || inputs.length == 0) {
-                return;
-            }
-            endOfView = doAction(inputs);
-
-        } while (endOfView != true);    }
-
-    private String[] getInputs() {
+    public String[] getInputs() {
        
         String[] inputs = new String[1];
         System.out.println("****************************************************");
@@ -39,25 +28,12 @@ class HelpMenuView {
         System.out.println("* R - How to look representable                    *");
         System.out.println("* Q - Go back                                      *");
         System.out.println("****************************************************");
-        boolean valid = false;
-        while (valid == false) {
-            System.out.println("You must enter a value");
-            Scanner inFile;
-            inFile = new Scanner(System.in);
-
-            //Trim off leading and trailing blanks from the value 
-            inputs[0] = inFile.nextLine().trim();
-            if (inputs[0].length() < 1) {
-                System.out.println("Enter letter below:");
-                continue;
-            }
-            valid = true;
-        }
-
-        return inputs;
+       String playersName = this.getInput("\nEnter letter below:");
+        inputs[0] = playersName;
+       return inputs;
     }
 
-    private boolean doAction(String[] inputs) {
+    public boolean doAction(String[] inputs) {
      String menuItem = inputs[0];
         menuItem = menuItem.toUpperCase();
         switch (menuItem) {

@@ -100,7 +100,7 @@ class MainMenuView {
 
     private void getHelp() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
+        helpMenu.display();
     }
 
 }
