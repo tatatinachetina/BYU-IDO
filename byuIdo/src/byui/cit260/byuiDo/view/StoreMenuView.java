@@ -59,13 +59,14 @@ public class StoreMenuView extends View {
     }
 
     private void getWares() {
-        ItemsPriceMenuView itemsPriceMenu = new ItemsPriceMenuView();
-        itemsPriceMenu.displayItemsPriceMenuView();
+   ItemsPriceMenuView itemsPriceMenu = new ItemsPriceMenuView();
+   itemsPriceMenu.display();
     }
 
     private void getShop() {
-        ItemsPriceMenuView itemsPriceMenu = new ItemsPriceMenuView();
-        itemsPriceMenu.displayItemsPriceMenuView();
-
+        ItemsPriceMenuView itemsPriceMenu =  new ItemsPriceMenuView();
+        itemsPriceMenu.display();
+        
+      
     }
 }

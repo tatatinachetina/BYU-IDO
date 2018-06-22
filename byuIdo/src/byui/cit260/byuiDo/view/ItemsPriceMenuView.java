@@ -14,23 +14,12 @@ import java.util.Scanner;
  *
  * @author tanya
  */
-public class ItemsPriceMenuView extends View {
+public class ItemsPriceMenuView extends View{
 
     public ItemsPriceMenuView() {
     }
 
-    public void displayItemsPriceMenuView() {
-        boolean endOfView = false;
-        do {
-            String[] inputs = this.getInputs();
-            if (inputs[0].toUpperCase().equals("Q") || inputs.length == 0) {
-                return;
-            }
-            endOfView = doAction(inputs);
-
-        } while (endOfView != true);
-
-    }
+   
 
     public String[] getInputs() {
 
@@ -47,11 +36,13 @@ public class ItemsPriceMenuView extends View {
         System.out.println("* T - Gym T-shirt..$15.00                          *");
         System.out.println("* Enjoy your shopping!                             *");
         System.out.println("****************************************************");
+        //valid = false
+        String item = this.getInput("\nEnter the item you want to purchase");
+        inputs[0] = item;
+        String pay = this.getInput("\nEnter the number of items you want to purchase:");
+        inputs[1] = pay;
+       return inputs;
 
-        inputs[0] = this.getInput("\nPlease enter the item");
-        inputs[1] = this.getInput("\nEnter the number of items you want to purchase:");
-
-        return inputs;
     }
 
     public boolean doAction(String[] inputs) {

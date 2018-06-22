@@ -137,7 +137,7 @@ String menuItem = inputs[0];
 
     private void goToWork() {
         JobMenuView jobMenu = new JobMenuView();
-        jobMenu.displayJobMenu();
+        jobMenu.display();
     }
 
 }
