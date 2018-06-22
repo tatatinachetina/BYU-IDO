@@ -5,8 +5,9 @@
  */
 package byui.cit260.byuiDo.view;
 
-import byui.cit260.byuiDo.control.storeControl;
+import byui.cit260.byuiDo.control.StoreControl;
 import byui.cit260.byuiDo.model.Player;
+import byui.cit260.byuiDo.control.StoreControl;
 import java.util.Scanner;
 
 /**
@@ -68,11 +69,8 @@ public class ItemsPriceMenuView extends View{
                 return false;
         }
 
-        // TODO - get the price of the item
-        String strAmmount = inputs[1];
-        double ammount = Double.parseDouble(strAmmount);
-        double total = storeControl.calcTotalPrice(15, ammount);
-
+        double ammount = Double.parseDouble(inputs[0]);
+        double total = StoreControl.calcTotalPrice(15, ammount);
         if (total <= 0) {
             System.out.println("Please check the valid number of items");
             return false;

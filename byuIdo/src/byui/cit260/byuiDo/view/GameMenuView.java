@@ -106,7 +106,8 @@ String menuItem = inputs[0];
 
     private void goToShop() {
         StoreMenuView storeMenu = new StoreMenuView();
-        storeMenu.displayStoreMenuView();
+        storeMenu.display();
+        
     }
 
     private void goToWork() {

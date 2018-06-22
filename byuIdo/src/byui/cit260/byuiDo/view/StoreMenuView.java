@@ -11,70 +11,35 @@ import java.util.Scanner;
  *
  * @author tanya
  */
-public class StoreMenuView {
+public class StoreMenuView extends View {
 
     public StoreMenuView() {
     }
 
-    public void displayStoreMenuView() {
-
-        boolean endOfView = false;
-        do {
-            String[] inputs = this.getInputs();
-            if (inputs[0].toUpperCase().equals("Q") || inputs.length == 0) {
-                return;
-            }
-            endOfView = doAction(inputs);
-
-        } while (endOfView != true);
-
-    }
-
     //get players name
-    private String[] getInputs() {
+    public String[] getInputs() {
 
         //inputs = new String array one element long 
         String[] inputs = new String[1];
 
         //Display a description of the view 
-        System.out.println("****************************************************");
-        System.out.println("* Welcome to Walmart shop                          *");
-        System.out.println("* Here you can buy all kind of items for  all your *");
-        System.out.println("* dating needs.                                    *");
-        System.out.println("* My name is Rex:) How can I help you?             *");
-        System.out.println("* Choose the option below:                         *");
-        System.out.println("* W - Browse Wares                                 *");
-        System.out.println("* B - Buy Items                                    *");
-        System.out.println("* Q - Exit                                         *");
-        System.out.println("****************************************************");
-        //valid = false 
-        boolean valid = false;
+        System.out.println("****************************************************\n"
+                + "* Welcome to Walmart shop                          *\n"
+                + "* Here you can buy all kind of items for  all your *\n"
+                + "* dating needs.                                    *\n"
+                + "* My name is Rex:) How can I help you?             *\n"
+                + "* Choose the option below:                         *\n"
+                + "* W - Browse Wares                                 *\n"
+                + "* B - Buy Items                                    *\n"
+                + "* Q - Exit                                         *\n"
+                + "****************************************************");
 
-        //WHILE valid == false (no input value has been entered) 
-        while (valid == false) {
-            //Display the prompt message 
-            System.out.println("Enter the valid option:");
-
-            //Get the value entered from the keyboard 
-            Scanner inFile;
-            inFile = new Scanner(System.in);
-
-            //Trim off leading and trailing blanks from the value 
-            inputs[0] = inFile.nextLine().trim();
-
-            //IF length of the value < 1 then
-            if (inputs[0].length() < 1) //Display "You must enter a non-blank value”
-            {
-                System.out.println("You must enter a non-blank value.");
-                continue;
-            }
-            valid = true;
-        }
-
+        String storeMenu = this.getInput("\nPlease enter your option");
+        inputs[0] = storeMenu;
         return inputs;
     }
 
-    private boolean doAction(String[] inputs) {
+    public boolean doAction(String[] inputs) {
         String menuItem = inputs[0];
         menuItem = menuItem.toUpperCase();
         switch (menuItem) {

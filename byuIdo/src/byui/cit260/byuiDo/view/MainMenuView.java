@@ -14,12 +14,10 @@ import java.util.Scanner;
  *
  * @author Jake
  */
-class MainMenuView extends View{
+public class MainMenuView extends View {
 
     public MainMenuView() {
     }
-
-    
 
     public String[] getInputs() {
 
@@ -30,9 +28,10 @@ class MainMenuView extends View{
         System.out.println("* H - Get help on how to play the game             *");
         System.out.println("* Q - Quit Game                                    *");
         System.out.println("****************************************************");
-        String input = this.getInput("\nEnter letter below:");
-        inputs[0] = input;
-       return inputs;
+
+        String menuOption = this.getInput("\nPlease enter the Menu Option");
+        inputs[0] = menuOption;
+        return inputs;
     }
 
     //doAction(inputs): boolean 
