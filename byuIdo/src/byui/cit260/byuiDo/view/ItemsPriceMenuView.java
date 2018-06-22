@@ -36,8 +36,8 @@ public class ItemsPriceMenuView extends View{
         System.out.println("* Enjoy your shopping!                             *");
         System.out.println("****************************************************");
         //valid = false
-        String hours = this.getInput("\nEnter the item you want to purchase");
-        inputs[0] = hours;
+        String item = this.getInput("\nEnter the item you want to purchase");
+        inputs[0] = item;
         String pay = this.getInput("\nEnter the number of items you want to purchase:");
         inputs[1] = pay;
        return inputs;
