@@ -5,7 +5,7 @@
  */
 package byui.cit260.byuiDo.view;
 
-import byui.cit260.byuiDo.control.jobControl;
+import byui.cit260.byuiDo.control.JobControl;
 import java.util.Scanner;
 
 /**
@@ -72,7 +72,7 @@ class EndShiftView {
     private boolean doAction(String[] inputs) {
         double hours = Double.parseDouble(inputs[0]);
         double pay = Double.parseDouble(inputs[1]);
-        double wage = jobControl.calculateWage(hours, pay);
+        double wage = JobControl.calculateWage(hours, pay);
 
         if (wage == -1) {
             System.out.println("Your hours are wrong!!!");

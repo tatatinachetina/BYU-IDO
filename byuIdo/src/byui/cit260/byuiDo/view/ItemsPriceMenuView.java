@@ -5,15 +5,16 @@
  */
 package byui.cit260.byuiDo.view;
 
-import byui.cit260.byuiDo.control.storeControl;
+import byui.cit260.byuiDo.control.StoreControl;
 import byui.cit260.byuiDo.model.Player;
+import byui.cit260.byuiDo.control.StoreControl;
 import java.util.Scanner;
 
 /**
  *
  * @author tanya
  */
-public class ItemsPriceMenuView {
+public class ItemsPriceMenuView extends View {
 
     public ItemsPriceMenuView() {
     }
@@ -31,7 +32,7 @@ public class ItemsPriceMenuView {
 
     }
 
-    private String[] getInputs() {
+    public String[] getInputs() {
 
         //inputs = new String array one element long 
         String[] inputs = new String[2];
@@ -46,56 +47,14 @@ public class ItemsPriceMenuView {
         System.out.println("* T - Gym T-shirt..$15.00                          *");
         System.out.println("* Enjoy your shopping!                             *");
         System.out.println("****************************************************");
-        //valid = false 
-        boolean valid = false;
 
-        //WHILE valid == false (no input value has been entered) 
-        while (valid == false) {
-            //Display the prompt message 
-            System.out.println("Enter the item you want to purchase:");
-
-            //Get the value entered from the keyboard 
-            Scanner inFile;
-            inFile = new Scanner(System.in);
-
-            //Trim off leading and trailing blanks from the value 
-            inputs[0] = inFile.nextLine().trim();
-
-            //IF length of the value < 1 then
-            if (inputs[0].length() < 1) //Display "You must enter a non-blank value”
-            {
-                System.out.println("You must enter a non-blank value.");
-                continue;
-            }
-            valid = true;
-        }
-
-        //WHILE valid == false (no input value has been entered) 
-        valid = false;
-        while (valid == false) {
-            //Display the prompt message 
-            System.out.println("Enter the number of items you want to purchase:");
-
-            //Get the value entered from the keyboard 
-            Scanner inFile;
-            inFile = new Scanner(System.in);
-
-            //Trim off leading and trailing blanks from the value 
-            inputs[1] = inFile.nextLine().trim();
-
-            //IF length of the value < 1 then
-            if (inputs[1].length() < 1) //Display "You must enter a non-blank value”
-            {
-                System.out.println("You must enter a non-blank value.");
-                continue;
-            }
-            valid = true;
-        }
+        inputs[0] = this.getInput("\nPlease enter the item");
+        inputs[1] = this.getInput("\nEnter the number of items you want to purchase:");
 
         return inputs;
     }
 
-    private boolean doAction(String[] inputs) {
+    public boolean doAction(String[] inputs) {
         String menuItem = inputs[0];
         menuItem = menuItem.toUpperCase();
         switch (menuItem) {
@@ -119,11 +78,8 @@ public class ItemsPriceMenuView {
                 return false;
         }
 
-        // TODO - get the price of the item
-        String strAmmount = inputs[1];
-        double ammount = Double.parseDouble(strAmmount);
-        double total = storeControl.calcTotalPrice(15, ammount);
-
+        double ammount = Double.parseDouble(inputs[0]);
+        double total = StoreControl.calcTotalPrice(15, ammount);
         if (total <= 0) {
             System.out.println("Please check the valid number of items");
             return false;

@@ -59,7 +59,7 @@ public class StartProgramView extends View{
         //mainMenuView = Create a new MainMenuView object 
         MainMenuView mainMenuView = new MainMenuView();
         //mainMenuView.displayMainMenuView()
-        mainMenuView.displayMainMenuView();
+        mainMenuView.display();
         return true;
     }
 }

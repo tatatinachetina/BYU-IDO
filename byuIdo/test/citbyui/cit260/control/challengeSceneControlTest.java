@@ -5,7 +5,7 @@
  */
 package citbyui.cit260.control;
 
-import byui.cit260.byuiDo.control.challengeSceneControl;
+import byui.cit260.byuiDo.control.ChallengeSceneControl;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -30,7 +30,7 @@ public class challengeSceneControlTest {
         double interestRate = 6.0;
         long years = 3L;
         double expResult = 1800;
-        double result = challengeSceneControl.calculateInterest(borrowed, interestRate, years);
+        double result = ChallengeSceneControl.calculateInterest(borrowed, interestRate, years);
         assertEquals(expResult, result, 0.0001);
         
              
@@ -39,7 +39,7 @@ public class challengeSceneControlTest {
          interestRate = 6.0;
          years = 3L;
          expResult = -1;
-         result = challengeSceneControl.calculateInterest(borrowed, interestRate, years);
+         result = ChallengeSceneControl.calculateInterest(borrowed, interestRate, years);
         assertEquals(expResult, result, 0.0001);
         
         
@@ -48,7 +48,7 @@ public class challengeSceneControlTest {
          interestRate = 0.0;
          years = 3L;
          expResult = -2;
-         result = challengeSceneControl.calculateInterest(borrowed, interestRate, years);
+         result = ChallengeSceneControl.calculateInterest(borrowed, interestRate, years);
         assertEquals(expResult, result, 0.0001);
         
         
@@ -57,7 +57,7 @@ public class challengeSceneControlTest {
          interestRate = 6.0;
          years = 0L;
          expResult = -3;
-         result = challengeSceneControl.calculateInterest(borrowed, interestRate, years);
+         result = ChallengeSceneControl.calculateInterest(borrowed, interestRate, years);
         assertEquals(expResult, result, 0.0001);
         
         
@@ -66,7 +66,7 @@ public class challengeSceneControlTest {
          interestRate = 1.0;
          years = 1L;
          expResult = 0.01;
-         result = challengeSceneControl.calculateInterest(borrowed, interestRate, years);
+         result = ChallengeSceneControl.calculateInterest(borrowed, interestRate, years);
         assertEquals(expResult, result, 0.0001);
     }
     }
