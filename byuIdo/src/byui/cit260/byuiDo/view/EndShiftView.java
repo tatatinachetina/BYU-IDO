@@ -45,8 +45,12 @@ class EndShiftView extends View{
             return false;
         }
 
-        if (wage < 5) {
+        if (wage < 45) {
             System.out.println("You need more money!!!");
+            return false;
+        }
+        if (wage > 200) {
+            System.out.println("Hm....That seems a bit too much....try again buddy.");
             return false;
         }
 
