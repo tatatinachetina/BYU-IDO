@@ -95,12 +95,12 @@ public class StoreMenuView {
 
     private void getWares() {
    ItemsPriceMenuView itemsPriceMenu = new ItemsPriceMenuView();
-   itemsPriceMenu.displayItemsPriceMenuView();
+   itemsPriceMenu.display();
     }
 
     private void getShop() {
         ItemsPriceMenuView itemsPriceMenu =  new ItemsPriceMenuView();
-        itemsPriceMenu.displayItemsPriceMenuView();
+        itemsPriceMenu.display();
         
       
     }
