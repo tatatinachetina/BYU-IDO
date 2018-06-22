@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.byuiDo.view;
+package byui.cit260.byuiDo.control;
 
 import byuido.ByuIdo;
 import byui.cit260.byuiDo.model.Player;
