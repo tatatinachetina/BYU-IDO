@@ -69,7 +69,7 @@ public class ItemsPriceMenuView extends View{
                 return false;
         }
 
-        double ammount = Double.parseDouble(inputs[0]);
+        double ammount = Double.parseDouble(inputs[1]);
         double total = StoreControl.calcTotalPrice(15, ammount);
         if (total <= 0) {
             System.out.println("Please check the valid number of items");
